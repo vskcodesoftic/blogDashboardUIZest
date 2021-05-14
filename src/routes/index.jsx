@@ -25,6 +25,9 @@ import Layout13 from 'layouts/PageLayouts/Layout13.jsx';
 import Layout14 from 'layouts/PageLayouts/Layout14.jsx';
 import Layout15 from 'layouts/PageLayouts/Layout15.jsx';
 
+import Blog from 'views/blog/Dashboard/Blog.jsx';
+
+
 var BASEDIR = process.env.REACT_APP_BASEDIR;
 
 var indexRoutes = [

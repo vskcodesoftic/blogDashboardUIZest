@@ -3,7 +3,7 @@ import {Redirect, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 const PublicRoute = ({children, isLoggedIn, ...rest}) => {
-    const isAuthenticated = isLoggedIn || localStorage.getItem('token');
+    const isAuthenticated = false
 
     return (
         <Route
@@ -25,7 +25,7 @@ const PublicRoute = ({children, isLoggedIn, ...rest}) => {
 };
 
 const mapStateToProps = (state) => ({
-    isLoggedIn: state.auth.isLoggedIn
+    isLoggedIn: false
 });
 
 export default connect(mapStateToProps)(PublicRoute);
