@@ -183,7 +183,7 @@ class Header extends React.Component{
                 });  
             } else if(this.props.admintype === 'blog'){
                 this.setState({     
-                    profilename: 'Alice Gross',
+                    profilename: 'Alicce Gross',
                     profileimg: IMGDIR+'/images/profile/profile-blog.jpg'    
                 });  
             } else if(this.props.admintype === 'ecommerce'){

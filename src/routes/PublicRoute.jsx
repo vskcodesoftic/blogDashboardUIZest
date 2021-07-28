@@ -12,7 +12,7 @@ const PublicRoute = ({children, isLoggedIn, ...rest}) => {
                 isAuthenticated ? (
                     <Redirect
                         to={{
-                            pathname: '/',
+                            pathname: '/codesoftic/app/blog/dashboard',
                             state: {from: location}
                         }}
                     />

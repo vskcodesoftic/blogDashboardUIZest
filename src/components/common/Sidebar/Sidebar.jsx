@@ -96,7 +96,7 @@ class Sidebar extends React.Component{
         } else if(this.props.admintype === 'blog'){
             this.setState({     
                 profileposition: 'Editor',
-                profilename: 'Alice Gross',
+                profilename: 'Alddice Gross',
                 profileimg: IMGDIR+'/images/profile/profile-blog.jpg'    
             });  
         } else if(this.props.admintype === 'ecommerce'){
@@ -176,13 +176,13 @@ class Sidebar extends React.Component{
             <div className="sidebar menubar" data-color="black">
 
                 <div className="logo">
-                    <a href="/" className="logo-mini">
+                    <a href="/codesoftic/app/blog/dashboard" className="logo-mini">
                         <div className="logo-img">
                             <img src={logomini} alt="react-logo" className="light-logo" />
                             <img src={logominidark} alt="react-logo" className="dark-logo"/>
                         </div>
                     </a>
-                    <a href="/" className="logo-full">
+                    <a href="/codesoftic/app/blog/dashboard" className="logo-full">
                             <img src={logofull} alt="react-logo" className="light-logo"/>
                             <img src={logofulldark} alt="react-logo" className="dark-logo"/>
                     </a>
