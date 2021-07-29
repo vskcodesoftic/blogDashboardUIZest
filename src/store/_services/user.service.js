@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { authHeader } from '../_helpers';
+import { authHeader, history } from '../_helpers';
 
+
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const userService = {
     login,
@@ -18,7 +21,7 @@ function login(email, password) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
     };
-
+ 
     return fetch(`https://badilnyint.com/api/user/login`, requestOptions)
         .then(handleResponse)
         .then(user => {
@@ -27,12 +30,13 @@ function login(email, password) {
               window.location.replace("/codesoftic/app/blog/dashboard")
             return user;
         });
+        
 }
 
 function logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('user');
-
+    history.push('/login')
 }
 
 function getAll() {
@@ -53,6 +57,7 @@ function handleResponse(response) {
                 logout();
                 //location.reload(true);
             }
+         
 
             const error = (data && data.message) || response.statusText;
             return Promise.reject(error);
